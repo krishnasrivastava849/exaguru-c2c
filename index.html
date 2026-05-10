@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Campus to Corporate — ExaGuru | B.Com Internship Program</title>
+<meta name="description" content="ExaGuru's Campus to Corporate program for B.Com students. Industry masterclasses, Excel certification, CV building, and placement assistance." />
+<link rel="shortcut icon" type="image/x-icon" href="https://knorishblobstorage-cbbeebf4h6dudbf2.z01.azurefd.net/public/e398964d-be9b-4e65-853d-89782b84d4e7/favicon/02052026/0qpad.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f172a;
+    --bg-card:#1e293b;
+    --bg-elev:#293548;
+    --line:rgba(255,255,255,0.08);
+    --line-strong:rgba(255,255,255,0.15);
+    --text:#ffffff;
+    --text-muted:#cbd5e1;
+    --text-soft:#94a3b8;
+    --brand:#0069ff;
+    --brand-2:#2563eb;
+    --brand-3:#3b82f6;
+    --brand-soft:#60a5fa;
+    --accent-yellow:#fbbf24;
+    --accent-green:#34d399;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";position:fixed;top:-300px;left:-200px;
+    width:700px;height:700px;
+    background:radial-gradient(circle,rgba(0,105,255,0.25) 0%,transparent 60%);
+    pointer-events:none;z-index:0;filter:blur(40px);
+  }
+  body::after{
+    content:"";position:fixed;bottom:-300px;right:-200px;
+    width:700px;height:700px;
+    background:radial-gradient(circle,rgba(37,99,235,0.18) 0%,transparent 60%);
+    pointer-events:none;z-index:0;filter:blur(40px);
+  }
+  .wrap{max-width:1280px;margin:0 auto;padding:0 32px;position:relative;z-index:2}
+  nav{padding:18px 0;position:sticky;top:0;z-index:50;background:rgba(15,23,42,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:24px}
+  .logo img{height:54px;width:auto;object-fit:contain;display:block}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(0,105,255,0.4)}
+  .nav-cta:hover{background:var(--brand-2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,105,255,0.5)}
+
+  .hero{padding:90px 0 80px;text-align:center;position:relative}
+  .pill{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(0,105,255,0.12);border:1px solid rgba(0,105,255,0.3);border-radius:100px;font-size:13px;font-weight:600;color:var(--brand-soft);margin-bottom:28px}
+  .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--accent-green);box-shadow:0 0 12px var(--accent-green);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+  .hero h1{font-size:clamp(44px,7vw,86px);font-weight:800;letter-spacing:-0.04em;line-height:1.02;margin-bottom:28px;max-width:1000px;margin-left:auto;margin-right:auto}
+  .hero h1 .grad{background:linear-gradient(135deg,var(--brand-soft) 0%,var(--brand) 50%,var(--accent-yellow) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero-sub{font-size:19px;color:var(--text-muted);max-width:680px;margin:0 auto 40px;line-height:1.6;font-weight:400}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:64px}
+  .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--brand);color:#fff;padding:18px 32px;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;transition:all .25s;box-shadow:0 8px 30px rgba(0,105,255,0.4)}
+  .btn-primary:hover{background:var(--brand-2);transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,105,255,0.55)}
+  .btn-primary svg{transition:transform .25s}
+  .btn-primary:hover svg{transform:translateX(4px)}
+  .btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:18px 28px;background:transparent;border:1px solid var(--line-strong);border-radius:12px;color:var(--text);font-size:15px;font-weight:500;text-decoration:none;transition:all .25s}
+  .btn-secondary:hover{background:var(--bg-card);border-color:var(--brand-3)}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:900px;margin:0 auto}
+  .stat{padding:28px 20px;text-align:center}
+  .stat-num{font-size:38px;font-weight:800;background:linear-gradient(135deg,var(--brand-soft),var(--brand));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.03em}
+  .stat-label{font-size:13px;color:var(--text-soft);margin-top:4px;font-weight:500}
+
+  section{padding:100px 0;position:relative}
+  .section-label{display:inline-block;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brand-soft);font-weight:700;margin-bottom:16px}
+  .section-title{font-size:clamp(36px,5vw,64px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin-bottom:20px;max-width:840px}
+  .section-lead{font-size:18px;color:var(--text-muted);max-width:640px;line-height:1.6}
+  .center{text-align:center}
+  .center .section-title,.center .section-lead{margin-left:auto;margin-right:auto}
+
+  .value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:60px}
+  .value-card{padding:32px 28px;background:linear-gradient(180deg,rgba(30,41,59,0.7) 0%,rgba(30,41,59,0.3) 100%);border:1px solid var(--line);border-radius:16px;transition:all .35s;position:relative;overflow:hidden}
+  .value-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--brand),var(--brand-soft));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+  .value-card:hover{border-color:var(--brand-3);transform:translateY(-6px)}
+  .value-card:hover::before{transform:scaleX(1)}
+  .value-icon{width:48px;height:48px;border-radius:12px;background:rgba(0,105,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--brand-soft)}
+  .value-card h3{font-size:19px;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em}
+  .value-card p{font-size:14px;color:var(--text-soft);line-height:1.55}
+
+  .masterclass-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:32px;margin-bottom:50px}
+  .masterclass-meta{display:flex;gap:32px;flex-wrap:wrap}
+  .meta-item{display:flex;flex-direction:column;gap:4px}
+  .meta-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-soft);font-weight:600}
+  .meta-val{font-size:22px;font-weight:700;color:var(--brand-soft)}
+  .tracks{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .track{padding:36px 32px;border-radius:16px;background:linear-gradient(180deg,rgba(30,41,59,0.7) 0%,rgba(30,41,59,0.4) 100%);border:1px solid var(--line);transition:all .3s;position:relative;overflow:hidden}
+  .track::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(0,105,255,0.15),transparent 70%);transition:transform .5s}
+  .track:hover{border-color:var(--brand-3);transform:translateY(-4px)}
+  .track:hover::after{transform:scale(1.4)}
+  .track-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;position:relative;z-index:2}
+  .track-name{font-size:30px;font-weight:800;letter-spacing:-0.03em}
+  .track-tag{font-size:11px;font-weight:700;letter-spacing:0.15em;color:var(--accent-yellow);padding:6px 12px;background:rgba(251,191,36,0.1);border-radius:100px;border:1px solid rgba(251,191,36,0.25)}
+  .track ul{list-style:none;position:relative;z-index:2}
+  .track li{padding:14px 0;font-size:15px;color:var(--text-muted);display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
+  .track li:last-child{border-bottom:none}
+  .track li svg{flex-shrink:0;color:var(--brand-soft)}
+
+  .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:60px}
+  .skill-block{padding:44px 36px;border-radius:16px;background:linear-gradient(135deg,rgba(0,105,255,0.08) 0%,rgba(30,41,59,0.7) 100%);border:1px solid var(--line);position:relative;overflow:hidden}
+  .skill-tag{display:inline-block;padding:6px 14px;background:rgba(0,105,255,0.15);color:var(--brand-soft);font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;border-radius:100px;margin-bottom:20px;border:1px solid rgba(0,105,255,0.3)}
+  .skill-block h3{font-size:34px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px}
+  .skill-block .meta{font-size:13px;color:var(--accent-yellow);font-weight:600;letter-spacing:0.05em;margin-bottom:16px}
+  .skill-block p{color:var(--text-muted);line-height:1.6;font-size:15px}
+
+  .profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:60px}
+  .profile-card{padding:36px 32px;border-radius:16px;background:rgba(30,41,59,0.5);border:1px solid var(--line);border-left:3px solid var(--brand);transition:all .3s}
+  .profile-card:hover{transform:translateX(6px);border-left-color:var(--accent-yellow)}
+  .profile-card h4{font-size:24px;font-weight:700;margin-bottom:12px;letter-spacing:-0.01em}
+  .profile-card p{color:var(--text-muted);font-size:15px;line-height:1.6}
+
+  .recruiters-section{background:linear-gradient(180deg,transparent 0%,rgba(0,105,255,0.04) 50%,transparent 100%)}
+  .logo-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:60px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .logo-cell{padding:32px 20px;text-align:center;background:var(--bg-card);font-size:18px;font-weight:600;color:var(--text-muted);letter-spacing:-0.01em;transition:all .3s;display:flex;align-items:center;justify-content:center;min-height:90px}
+  .logo-cell:hover{background:var(--bg-elev);color:var(--brand-soft)}
+  .logo-cell.accent{color:var(--accent-yellow)}
+
+  .why-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start;margin-top:60px}
+  .why-list{list-style:none;counter-reset:wc}
+  .why-list li{counter-increment:wc;padding:24px 24px 24px 80px;position:relative;background:rgba(30,41,59,0.4);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;font-size:17px;font-weight:600;line-height:1.4;transition:all .3s}
+  .why-list li:hover{background:rgba(30,41,59,0.7);border-color:var(--brand-3);transform:translateX(6px)}
+  .why-list li::before{content:"0" counter(wc);position:absolute;left:24px;top:50%;transform:translateY(-50%);font-size:13px;font-weight:800;color:var(--brand-soft);letter-spacing:0.1em;background:rgba(0,105,255,0.12);padding:6px 10px;border-radius:8px;border:1px solid rgba(0,105,255,0.25)}
+  .why-side{padding:36px;border-radius:16px;background:linear-gradient(135deg,var(--brand) 0%,#0530ad 100%);color:#fff;box-shadow:0 20px 60px rgba(0,105,255,0.3);position:sticky;top:120px}
+  .why-side .label{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.85;margin-bottom:16px;font-weight:600}
+  .why-side h4{font-size:24px;font-weight:700;line-height:1.25;margin-bottom:24px;letter-spacing:-0.02em}
+  .pedigree{display:flex;gap:10px;flex-wrap:wrap}
+  .pedigree span{padding:8px 16px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:100px;font-size:13px;font-weight:700;letter-spacing:0.05em}
+
+  .final{padding:120px 0;text-align:center;position:relative;overflow:hidden}
+  .final-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,105,255,0.18) 0%,transparent 60%);pointer-events:none}
+  .final h2{font-size:clamp(40px,6vw,72px);font-weight:800;letter-spacing:-0.04em;line-height:1.05;margin-bottom:24px}
+  .final h2 .grad{background:linear-gradient(135deg,var(--accent-yellow),var(--brand-soft));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .final p{font-size:18px;color:var(--text-muted);max-width:560px;margin:0 auto 40px;line-height:1.6}
+  .eligibility-pill{display:inline-block;padding:10px 22px;background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.3);color:var(--accent-yellow);border-radius:100px;font-size:13px;font-weight:600;letter-spacing:0.05em;margin-bottom:28px}
+
+  footer{padding:60px 0 40px;border-top:1px solid var(--line);background:rgba(15,23,42,0.6)}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  .foot-logo img{height:50px;width:auto;opacity:0.85}
+  .foot-contact{display:flex;gap:24px;font-size:14px;color:var(--text-soft);flex-wrap:wrap}
+  .foot-contact a{color:var(--text-muted);text-decoration:none;font-weight:600;transition:color .2s}
+  .foot-contact a:hover{color:var(--brand-soft)}
+  .foot-meta{font-size:13px;color:var(--text-soft)}
+  .foot-meta a{color:var(--brand-soft);text-decoration:none}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:all .9s cubic-bezier(0.16,1,0.3,1)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  @media(max-width:900px){
+    .hero-stats{grid-template-columns:repeat(2,1fr)}
+    .value-grid{grid-template-columns:1fr 1fr}
+    .tracks{grid-template-columns:1fr}
+    .skills-grid,.profile-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr}
+    .why-side{position:static}
+    .logo-strip{grid-template-columns:repeat(2,1fr)}
+    .foot{flex-direction:column;text-align:center}
+    .masterclass-head{flex-direction:column;align-items:flex-start}
+  }
+  @media(max-width:640px){
+    /* fix horizontal scroll from ambient blobs */
+    body::before,body::after{width:400px;height:400px;filter:blur(60px)}
+    body::before{top:-200px;left:-150px}
+    body::after{bottom:-200px;right:-150px}
+
+    .wrap{padding:0 18px}
+    section{padding:60px 0}
+
+    /* NAV */
+    nav{padding:14px 0}
+    .logo img{height:42px}
+    .nav-cta{padding:10px 16px;font-size:13px}
+    .nav-cta svg{display:none}
+
+    /* HERO */
+    .hero{padding:40px 0 50px;text-align:center}
+    .pill{font-size:11px;padding:7px 14px;margin-bottom:22px}
+    .pill .dot{width:5px;height:5px}
+    .hero h1{font-size:36px;letter-spacing:-0.025em;line-height:1.08;margin:0 auto 20px;max-width:100%}
+    .hero h1 br{display:inline}
+    .hero-sub{font-size:15px;line-height:1.6;margin:0 auto 30px;text-align:center;max-width:100%;padding:0;color:#cbd5e1}
+    .cta-row{flex-direction:column;gap:10px;margin-bottom:40px;justify-content:center;align-items:stretch}
+    .btn-primary,.btn-secondary{width:100%;justify-content:center;padding:16px 24px;font-size:14px}
+    .hero-stats{grid-template-columns:repeat(2,1fr);gap:10px}
+    .stat{padding:18px 12px;background:rgba(30,41,59,0.45);border:1px solid var(--line);border-radius:12px}
+    .stat-num{font-size:26px}
+    .stat-label{font-size:11px}
+
+    /* SECTIONS */
+    .section-label{font-size:11px;margin-bottom:12px}
+    .section-title{font-size:30px;letter-spacing:-0.02em;line-height:1.1;margin-bottom:14px}
+    .section-lead{font-size:15px}
+
+    /* VALUE */
+    .value-grid{grid-template-columns:1fr;gap:14px;margin-top:40px}
+    .value-card{padding:24px 22px}
+    .value-card h3{font-size:17px}
+    .value-card p{font-size:13px}
+    .value-icon{width:42px;height:42px;margin-bottom:16px}
+
+    /* MASTERCLASS */
+    .masterclass-meta{gap:20px;margin-bottom:30px}
+    .meta-val{font-size:18px}
+    .meta-label{font-size:10px}
+    .tracks{gap:14px}
+    .track{padding:26px 22px}
+    .track-head{margin-bottom:18px}
+    .track-name{font-size:24px}
+    .track-tag{font-size:10px;padding:5px 10px}
+    .track li{padding:11px 0;font-size:14px}
+
+    /* SKILLS */
+    .skills-grid{gap:14px;margin-top:40px}
+    .skill-block{padding:30px 24px}
+    .skill-block h3{font-size:26px;margin-bottom:6px}
+    .skill-block .meta{font-size:12px;margin-bottom:12px}
+    .skill-block p{font-size:14px}
+    .skill-tag{margin-bottom:14px;font-size:10px;padding:5px 11px}
+
+    /* PROFILE */
+    .profile-grid{gap:14px;margin-top:40px}
+    .profile-card{padding:26px 22px}
+    .profile-card h4{font-size:20px}
+    .profile-card p{font-size:14px}
+
+    /* RECRUITERS */
+    .logo-strip{grid-template-columns:1fr 1fr;margin-top:40px}
+    .logo-cell{font-size:14px;padding:22px 12px;min-height:70px}
+
+    /* WHY */
+    .why-grid{gap:24px;margin-top:40px}
+    .why-list li{padding:18px 18px 18px 60px;font-size:15px;line-height:1.45;margin-bottom:10px}
+    .why-list li::before{left:14px;font-size:11px;padding:5px 8px}
+    .why-side{padding:26px 22px}
+    .why-side h4{font-size:18px;margin-bottom:18px}
+    .why-side .label{font-size:11px;margin-bottom:12px}
+    .pedigree span{padding:6px 12px;font-size:12px}
+
+    /* FINAL CTA */
+    .final{padding:80px 0}
+    .final h2{font-size:36px;letter-spacing:-0.02em;line-height:1.1}
+    .final p{font-size:15px;margin-bottom:32px}
+    .eligibility-pill{font-size:11px;padding:8px 16px;letter-spacing:0.04em;margin-bottom:22px}
+    .final .btn-primary{width:100%;padding:18px 24px!important;font-size:14px!important}
+
+    /* FOOTER */
+    footer{padding:40px 0 32px}
+    .foot{gap:18px}
+    .foot-logo img{height:42px}
+    .foot-contact{flex-direction:column;gap:8px;align-items:center}
+    .foot-meta{font-size:12px;text-align:center}
+  }
+  @media(max-width:380px){
+    .hero h1{font-size:34px}
+    .section-title{font-size:26px}
+    .final h2{font-size:30px}
+    .track-name{font-size:21px}
+    .skill-block h3{font-size:22px}
+    .stat-num{font-size:23px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="https://www.exaguru.com/" class="logo">
+      <img src="https://knorishblobstorage-cbbeebf4h6dudbf2.z01.azurefd.net/public/e398964d-be9b-4e65-853d-89782b84d4e7/customfile/05032026/bbfbd.png" alt="ExaGuru Logo" />
+    </a>
+    <a href="https://forms.gle/Ab5bD8xoXQVSrJAy7" target="_blank" class="nav-cta">
+      Register Now
+      <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 5h12m0 0L9 1m4 4L9 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="pill"><span class="dot"></span> B.Com Internship Program · Cohort 2026 Now Open</div>
+  <h1>Elevate your career from <br><span class="grad">Campus to Corporate.</span></h1>
+  <p class="hero-sub">A 60-hour program for B.Com students who want more than a degree. Industry masterclasses, real work exposure, and placement-ready skills. Taught by alumni of IIMs, XLRI, IITs and Fortune 500 professionals.</p>
+  <div class="cta-row">
+    <a href="https://forms.gle/Ab5bD8xoXQVSrJAy7" target="_blank" class="btn-primary">
+      Apply For Internship
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 7h15m0 0L11 1m5 6l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a href="#program" class="btn-secondary">Explore Program</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">60+</div><div class="stat-label">Hours of Training</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Certifications</div></div>
+    <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Industry Experts</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Placement Assist</div></div>
+  </div>
+</header>
+
+<section id="program">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-label">What You Get</span>
+      <h2 class="section-title">Built for the <span style="color:var(--brand-soft)">real corporate floor.</span></h2>
+      <p class="section-lead">Four pillars that turn your degree into a recruiter-magnet. No fluff, no filler.</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Real Industry Work Experience</h3>
+        <p>Live projects modelled on actual case studies from top recruiters.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="5" stroke="currentColor" stroke-width="2"/><path d="M8 13l-2 8 6-3 6 3-2-8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Certificates For Each Course</h3>
+        <p>Earn individual industry-recognised certificates across every vertical.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 014 4v3a4 4 0 11-8 0V6a4 4 0 014-4zM6 22v-3a4 4 0 014-4h4a4 4 0 014 4v3" stroke="currentColor" stroke-width="2"/></svg></div>
+        <h3>Soft Skill Training Sessions</h3>
+        <p>Personal Interview &amp; Group Discussion drills to ace elimination rounds.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17l5-5 4 4 8-9M14 7h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Career Development Path</h3>
+        <p>CV building, LinkedIn enhancement and mentorship till placement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-label">Masterclass by Industry Leaders</span>
+      <h2 class="section-title">Taught by people who <span style="color:var(--accent-yellow)">hire people.</span></h2>
+    </div>
+    <div class="masterclass-head reveal">
+      <p class="section-lead">Four verticals. Three deep-dives per vertical. Built on real hiring case studies.</p>
+      <div class="masterclass-meta">
+        <div class="meta-item"><span class="meta-label">Duration</span><span class="meta-val">20 hrs</span></div>
+        <div class="meta-item"><span class="meta-label">Certificates</span><span class="meta-val">Upto 3</span></div>
+        <div class="meta-item"><span class="meta-label">Format</span><span class="meta-val">Case-Study Led</span></div>
+      </div>
+    </div>
+    <div class="tracks">
+      <div class="track reveal">
+        <div class="track-head"><div class="track-name">Marketing</div><span class="track-tag">Track 01</span></div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Brand Positioning &amp; Identity</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Digital Marketing Ecosystems</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Market Research &amp; Analytics</li>
+        </ul>
+      </div>
+      <div class="track reveal">
+        <div class="track-head"><div class="track-name">Finance</div><span class="track-tag">Track 02</span></div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Investment Banking Basics</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Corporate Valuation</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Fintech &amp; Modern Banking</li>
+        </ul>
+      </div>
+      <div class="track reveal">
+        <div class="track-head"><div class="track-name">E-Commerce</div><span class="track-tag">Track 03</span></div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> D2C Growth Strategies</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Platform Operations</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Digital Consumer Trends</li>
+        </ul>
+      </div>
+      <div class="track reveal">
+        <div class="track-head"><div class="track-name">Ops &amp; SCM</div><span class="track-tag">Track 04</span></div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Lean Supply Chain Management</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Last Mile Logistics</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Procurement &amp; Sourcing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-label">Skill Enhancement Sessions</span>
+      <h2 class="section-title">The <span style="color:var(--brand-soft)">hard skills</span> nobody teaches in class.</h2>
+      <p class="section-lead">These will equip you with the hard skills of the corporate world.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-block reveal">
+        <span class="skill-tag">Hard Skill</span>
+        <h3>Microsoft Excel</h3>
+        <div class="meta">Basic + Advance · 20 Hours · Certification Course</div>
+        <p>From pivot tables to financial modelling. The single most-asked skill on every B.Com fresher JD — drilled till it's second nature.</p>
+      </div>
+      <div class="skill-block reveal">
+        <span class="skill-tag">Soft Skill</span>
+        <h3>PI &amp; GD Mastery</h3>
+        <div class="meta">Strategy Sessions · Live Drills · Mock Rounds</div>
+        <p>Personal Interview and Group Discussion training to ace the elimination rounds of top companies. Real feedback, real frameworks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-label">Profile Development Sessions</span>
+      <h2 class="section-title">Your profile matters as much as your <span style="color:var(--accent-yellow)">knowledge.</span></h2>
+    </div>
+    <div class="profile-grid">
+      <div class="profile-card reveal">
+        <h4>CV Building</h4>
+        <p>Learn how to create a CV that stands out and makes a high impact. Get personalised feedback to craft an ATS-compliant resume that lands interviews.</p>
+      </div>
+      <div class="profile-card reveal">
+        <h4>LinkedIn Profile Enhancement</h4>
+        <p>Unlock new ways to appear in the most-searched profiles on LinkedIn. Keyword strategy, headline craft, content rhythm — built recruiter-first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recruiters-section">
+  <div class="wrap">
+    <div class="reveal center">
+      <span class="section-label">Learn From Industry Experts From</span>
+      <h2 class="section-title">The firms that <span style="color:var(--brand-soft)">shape India's economy.</span></h2>
+    </div>
+    <div class="logo-strip reveal">
+      <div class="logo-cell">D. E. Shaw &amp; Co</div>
+      <div class="logo-cell">ICICI Bank</div>
+      <div class="logo-cell">Adani</div>
+      <div class="logo-cell">Nykaa</div>
+      <div class="logo-cell">Unilever</div>
+      <div class="logo-cell">Amazon</div>
+      <div class="logo-cell">Flipkart</div>
+      <div class="logo-cell">Infosys</div>
+      <div class="logo-cell">Google</div>
+      <div class="logo-cell">Accenture</div>
+      <div class="logo-cell">EY</div>
+      <div class="logo-cell accent">+ many more</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-label">Why Choose This Program</span>
+      <h2 class="section-title">Not a course. <span style="color:var(--brand-soft)">A launchpad.</span></h2>
+    </div>
+    <div class="why-grid">
+      <ul class="why-list">
+        <li class="reveal">Direct access to industry mentorship networks.</li>
+        <li class="reveal">Insights on the actual hiring processes of top recruiters.</li>
+        <li class="reveal">Case-study based learning methodology — no textbooks.</li>
+        <li class="reveal">Placement assistance &amp; full interview grooming till you land.</li>
+      </ul>
+      <aside class="why-side reveal">
+        <div class="label">Who Teaches You</div>
+        <h4>Alumni of Top B-schools and working professionals from tier-1 organisations.</h4>
+        <div class="pedigree">
+          <span>IIMs</span><span>XLRI</span><span>IITs</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="final-bg"></div>
+  <div class="wrap">
+    <div class="eligibility-pill reveal">Eligibility · UG · Management · Commerce · Banking</div>
+    <h2 class="reveal">Seats are limited.<br><span class="grad">Careers aren't.</span></h2>
+    <p class="reveal">Fill the registration form and our team will reach out within 24 hours. Cohorts are running now.</p>
+    <a href="https://forms.gle/Ab5bD8xoXQVSrJAy7" target="_blank" class="btn-primary reveal" style="font-size:16px;padding:20px 38px">
+      Register For Internship
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 7h15m0 0L11 1m5 6l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="https://www.exaguru.com/" class="foot-logo">
+      <img src="https://knorishblobstorage-cbbeebf4h6dudbf2.z01.azurefd.net/public/e398964d-be9b-4e65-853d-89782b84d4e7/customfile/05032026/bbfbd.png" alt="ExaGuru" />
+    </a>
+    
+    <div class="foot-meta">
+      <a href="mailto:support@exaguru.com">support@exaguru.com</a> · <a href="https://www.exaguru.com/">www.exaguru.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
